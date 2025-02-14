@@ -4,10 +4,10 @@ val = 0
 keyval = 0
 
 while True:
-  choice = input("ENCRYPT or DECRYPT")
-  choice = choice.upper()
+  xyz = input("ENCRYPT or DECRYPT")
+  choice = xyz.upper()
   if choice == "ENCRYPT":
-    msg = input("What is your message?") #not to be confused with Monosodium glutamate
+    msg = input("What is your message?") #Not to be confused with Monosodium glutamate
     
     key = input("What key")
     
@@ -19,7 +19,7 @@ while True:
       
       keyval = standard.index(char2)
       
-      encryptval = val + keyval + 1
+      encryptval = val + keyval + len(keyres)
       if encryptval >= 37:
         encryptval -= 37
       #print(encryptval)
@@ -42,7 +42,7 @@ while True:
       
       keyval = standard.index(char2)
       
-      encryptval = val - keyval - 1
+      encryptval = val - keyval - len(keyres)
       if encryptval < 0:
         encryptval += 37
       #print(encryptval)
